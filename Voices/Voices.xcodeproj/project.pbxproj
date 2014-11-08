@@ -13,6 +13,10 @@
 		822A4AB51A0456DF00884B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB41A0456DF00884B10 /* Images.xcassets */; };
 		822A4AB81A0456DF00884B10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB61A0456DF00884B10 /* LaunchScreen.xib */; };
 		822A4AC41A0456DF00884B10 /* VoicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AC31A0456DF00884B10 /* VoicesTests.swift */; };
+		822DFF731A0EA66A0023AE19 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DFF721A0EA66A0023AE19 /* ContactsViewController.swift */; };
+		822DFF751A0EA67F0023AE19 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DFF741A0EA67F0023AE19 /* InboxViewController.swift */; };
+		822DFF771A0EA6AA0023AE19 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DFF761A0EA6AA0023AE19 /* RecordViewController.swift */; };
+		822DFF791A0EAB270023AE19 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822DFF781A0EAB270023AE19 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		822A4ABD1A0456DF00884B10 /* VoicesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoicesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822A4AC21A0456DF00884B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		822A4AC31A0456DF00884B10 /* VoicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicesTests.swift; sourceTree = "<group>"; };
+		822DFF721A0EA66A0023AE19 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		822DFF741A0EA67F0023AE19 /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		822DFF761A0EA6AA0023AE19 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		822DFF781A0EAB270023AE19 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		822A4AAA1A0456DF00884B10 /* Voices */ = {
 			isa = PBXGroup;
 			children = (
+				822DFF711A0EA6470023AE19 /* App */,
 				822A4AAD1A0456DF00884B10 /* AppDelegate.swift */,
 				822A4AAF1A0456DF00884B10 /* RootViewController.swift */,
 				822A4AB11A0456DF00884B10 /* Main.storyboard */,
@@ -110,6 +119,17 @@
 				822A4AC21A0456DF00884B10 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		822DFF711A0EA6470023AE19 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				822DFF781A0EAB270023AE19 /* ContentViewController.swift */,
+				822DFF721A0EA66A0023AE19 /* ContactsViewController.swift */,
+				822DFF741A0EA67F0023AE19 /* InboxViewController.swift */,
+				822DFF761A0EA6AA0023AE19 /* RecordViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +234,10 @@
 			files = (
 				822A4AB01A0456DF00884B10 /* RootViewController.swift in Sources */,
 				822A4AAE1A0456DF00884B10 /* AppDelegate.swift in Sources */,
+				822DFF771A0EA6AA0023AE19 /* RecordViewController.swift in Sources */,
+				822DFF731A0EA66A0023AE19 /* ContactsViewController.swift in Sources */,
+				822DFF791A0EAB270023AE19 /* ContentViewController.swift in Sources */,
+				822DFF751A0EA67F0023AE19 /* InboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

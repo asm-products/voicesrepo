@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -15,12 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="RootView" customModule="Voices" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1K-XI-99K" userLabel="Content ScrollView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g1K-XI-99K" secondAttribute="bottom" id="Agv-Et-qpv"/>
+                            <constraint firstItem="g1K-XI-99K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vv4-nE-hRg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g1K-XI-99K" secondAttribute="trailing" constant="-16" id="VzX-kh-89y"/>
+                            <constraint firstItem="g1K-XI-99K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="s7C-5A-7JG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentScrollView" destination="g1K-XI-99K" id="PFS-f4-rc6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="383" y="416"/>
+            <point key="canvasLocation" x="312" y="399"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="93D-ZM-T1F">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" id="rLa-ec-FNa" customClass="RecordViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9w-XW-VrE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pya-8y-4x2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YDs-I3-azj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jw-Lt-QON" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="399"/>
+        </scene>
+        <!--Inbox View Controller-->
+        <scene sceneID="uNW-M7-z2Z">
+            <objects>
+                <viewController storyboardIdentifier="InboxViewController" id="X5V-em-iow" customClass="InboxViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TBB-J9-FCY"/>
+                        <viewControllerLayoutGuide type="bottom" id="aob-PK-VJm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y3O-p5-acg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0g-RN-M7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="1059"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="rtq-Ku-Kd7">
+            <objects>
+                <viewController storyboardIdentifier="ContactsViewController" id="sTO-ig-Xbs" customClass="ContactsViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HTx-cl-v5p"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djd-BP-wnm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q15-0i-zYC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUY-1C-Nh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="1059"/>
         </scene>
     </scenes>
 </document>
