@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		822A4AAE1A0456DF00884B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AAD1A0456DF00884B10 /* AppDelegate.swift */; };
-		822A4AB01A0456DF00884B10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AAF1A0456DF00884B10 /* ViewController.swift */; };
+		822A4AB01A0456DF00884B10 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AAF1A0456DF00884B10 /* RootViewController.swift */; };
 		822A4AB31A0456DF00884B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB11A0456DF00884B10 /* Main.storyboard */; };
 		822A4AB51A0456DF00884B10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB41A0456DF00884B10 /* Images.xcassets */; };
 		822A4AB81A0456DF00884B10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB61A0456DF00884B10 /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		822A4AA81A0456DF00884B10 /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822A4AAC1A0456DF00884B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		822A4AAD1A0456DF00884B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		822A4AAF1A0456DF00884B10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		822A4AAF1A0456DF00884B10 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		822A4AB21A0456DF00884B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		822A4AB41A0456DF00884B10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		822A4AB71A0456DF00884B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				822A4AAD1A0456DF00884B10 /* AppDelegate.swift */,
-				822A4AAF1A0456DF00884B10 /* ViewController.swift */,
+				822A4AAF1A0456DF00884B10 /* RootViewController.swift */,
 				822A4AB11A0456DF00884B10 /* Main.storyboard */,
 				822A4AB41A0456DF00884B10 /* Images.xcassets */,
 				822A4AB61A0456DF00884B10 /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822A4AB01A0456DF00884B10 /* ViewController.swift in Sources */,
+				822A4AB01A0456DF00884B10 /* RootViewController.swift in Sources */,
 				822A4AAE1A0456DF00884B10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +407,7 @@
 				822A4AC91A0456DF00884B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		822A4ACA1A0456DF00884B10 /* Build configuration list for PBXNativeTarget "VoicesTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				822A4ACC1A0456DF00884B10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
