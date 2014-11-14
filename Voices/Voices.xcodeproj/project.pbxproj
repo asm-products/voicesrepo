@@ -22,6 +22,12 @@
 		823B729E1A16928400124679 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823B729D1A16928400124679 /* RecordButton.swift */; };
 		824D347F1A169A5400975EDD /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D347D1A169A5400975EDD /* Crashlytics.framework */; };
 		824D34801A169A5400975EDD /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824D347E1A169A5400975EDD /* Fabric.framework */; };
+		824D34821A169D9F00975EDD /* InboxCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D34811A169D9F00975EDD /* InboxCollectionViewController.swift */; };
+		824D34851A16A1E100975EDD /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D34841A16A1E100975EDD /* InboxCell.swift */; };
+		824D34871A16A80400975EDD /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D34861A16A80400975EDD /* ContactsCell.swift */; };
+		824D348B1A16A93500975EDD /* ContactsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D348A1A16A93500975EDD /* ContactsCollectionViewController.swift */; };
+		824D34981A16AC4B00975EDD /* NSObject+Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D34961A16AC4B00975EDD /* NSObject+Basics.swift */; };
+		824D34991A16AC4B00975EDD /* UIView+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D34971A16AC4B00975EDD /* UIView+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		823B729D1A16928400124679 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		824D347D1A169A5400975EDD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		824D347E1A169A5400975EDD /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		824D34811A169D9F00975EDD /* InboxCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxCollectionViewController.swift; sourceTree = "<group>"; };
+		824D34841A16A1E100975EDD /* InboxCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		824D34861A16A80400975EDD /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
+		824D348A1A16A93500975EDD /* ContactsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCollectionViewController.swift; sourceTree = "<group>"; };
+		824D34961A16AC4B00975EDD /* NSObject+Basics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Basics.swift"; sourceTree = "<group>"; };
+		824D34971A16AC4B00975EDD /* UIView+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,7 @@
 		822A4AAA1A0456DF00884B10 /* Voices */ = {
 			isa = PBXGroup;
 			children = (
+				824D34951A16AC2F00975EDD /* Extensions */,
 				822DFF711A0EA6470023AE19 /* App */,
 				822A4AAD1A0456DF00884B10 /* AppDelegate.swift */,
 				822A4AAF1A0456DF00884B10 /* RootViewController.swift */,
@@ -144,6 +157,7 @@
 		823B727D1A16920100124679 /* IBDesignables */ = {
 			isa = PBXGroup;
 			children = (
+				824D34831A16A11C00975EDD /* Cells */,
 				823B729C1A16923B00124679 /* Buttons */,
 				823B72801A16920100124679 /* IBDesignables.h */,
 				823B727E1A16920100124679 /* Supporting Files */,
@@ -179,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				822DFF721A0EA66A0023AE19 /* ContactsViewController.swift */,
+				824D348A1A16A93500975EDD /* ContactsCollectionViewController.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -187,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				822DFF741A0EA67F0023AE19 /* InboxViewController.swift */,
+				824D34811A169D9F00975EDD /* InboxCollectionViewController.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -198,6 +214,24 @@
 				824D347E1A169A5400975EDD /* Fabric.framework */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		824D34831A16A11C00975EDD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				824D34841A16A1E100975EDD /* InboxCell.swift */,
+				824D34861A16A80400975EDD /* ContactsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		824D34951A16AC2F00975EDD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				824D34961A16AC4B00975EDD /* NSObject+Basics.swift */,
+				824D34971A16AC4B00975EDD /* UIView+Extras.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,8 +366,12 @@
 				822A4AB01A0456DF00884B10 /* RootViewController.swift in Sources */,
 				822A4AAE1A0456DF00884B10 /* AppDelegate.swift in Sources */,
 				822DFF771A0EA6AA0023AE19 /* RecordViewController.swift in Sources */,
+				824D34981A16AC4B00975EDD /* NSObject+Basics.swift in Sources */,
+				824D348B1A16A93500975EDD /* ContactsCollectionViewController.swift in Sources */,
+				824D34991A16AC4B00975EDD /* UIView+Extras.swift in Sources */,
 				822DFF731A0EA66A0023AE19 /* ContactsViewController.swift in Sources */,
 				822DFF791A0EAB270023AE19 /* ContentViewController.swift in Sources */,
+				824D34821A169D9F00975EDD /* InboxCollectionViewController.swift in Sources */,
 				822DFF751A0EA67F0023AE19 /* InboxViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824D34851A16A1E100975EDD /* InboxCell.swift in Sources */,
 				823B729E1A16928400124679 /* RecordButton.swift in Sources */,
+				824D34871A16A80400975EDD /* ContactsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

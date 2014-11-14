@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class RecordButton: UIControl {
+public class RecordButton: UIControl {
    
     enum RecordingState {
         case Idle
@@ -42,7 +42,7 @@ class RecordButton: UIControl {
     
     // MARK: - Protected methods
     
-    override func drawRect(rect: CGRect) {
+    public override func drawRect(rect: CGRect) {
         
         /* Draw outer circle */
         let outerCircle = UIBezierPath(ovalInRect: bounds)
