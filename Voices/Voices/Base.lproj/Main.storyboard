@@ -143,7 +143,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tk4-dk-QZ6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="535"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cNG-yR-8D4">
                             <size key="itemSize" width="251" height="101"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -172,7 +172,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lfe-xt-qnl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lfe-xt-qnl">
                                                     <rect key="frame" x="14" y="14" width="46" height="46"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -180,11 +180,12 @@
                                                         <constraint firstAttribute="width" constant="46" id="z2V-Y2-PrJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABO-bR-04M">
-                                                    <rect key="frame" x="515" y="28" width="20" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABO-bR-04M">
+                                                    <rect key="frame" x="510" y="24" width="25" height="25"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Kq2-PJ-Nqg"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="9AL-8y-W5l"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="Kq2-PJ-Nqg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -193,8 +194,8 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="lfe-xt-qnl" firstAttribute="centerY" secondItem="ABO-bR-04M" secondAttribute="centerY" constant="0.5" id="0Vn-Z9-95W"/>
                                                 <constraint firstItem="aak-yR-GmU" firstAttribute="leading" secondItem="lfe-xt-qnl" secondAttribute="trailing" constant="14" id="2bq-JN-J0O"/>
-                                                <constraint firstItem="ABO-bR-04M" firstAttribute="top" secondItem="Ls4-ai-3cj" secondAttribute="top" constant="28" id="3Ob-bd-F7k"/>
                                                 <constraint firstItem="lfe-xt-qnl" firstAttribute="leading" secondItem="Ls4-ai-3cj" secondAttribute="leading" constant="14" id="8kl-hp-HeJ"/>
                                                 <constraint firstItem="HkF-k3-cA3" firstAttribute="top" secondItem="Ls4-ai-3cj" secondAttribute="top" constant="14" id="Br4-gw-jGB"/>
                                                 <constraint firstItem="aak-yR-GmU" firstAttribute="top" secondItem="HkF-k3-cA3" secondAttribute="bottom" constant="6" id="JSV-b4-tZX"/>
@@ -215,6 +216,10 @@
                                 </constraints>
                                 <size key="customSize" width="600" height="100"/>
                                 <connections>
+                                    <outlet property="avatarImageView" destination="lfe-xt-qnl" id="26S-ay-gu5"/>
+                                    <outlet property="contactNameLabel" destination="HkF-k3-cA3" id="b8v-aq-qnK"/>
+                                    <outlet property="containerView" destination="Ls4-ai-3cj" id="6Yo-cc-dct"/>
+                                    <outlet property="dateLabel" destination="aak-yR-GmU" id="66s-8w-z9u"/>
                                     <outlet property="messageCountLabel" destination="ABO-bR-04M" id="36e-aT-bJf"/>
                                 </connections>
                             </collectionViewCell>
@@ -276,7 +281,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4iG-nT-ZjI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="535"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nfs-IA-1ik">
                             <size key="itemSize" width="116" height="135"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -315,6 +320,10 @@
                                     <constraint firstItem="Grp-fV-UVP" firstAttribute="top" secondItem="b8P-0B-rUX" secondAttribute="bottom" constant="5" id="PyN-Kv-vkW"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="b8P-0B-rUX" secondAttribute="trailing" constant="10" id="zSi-TQ-Apc"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="b8P-0B-rUX" id="5Xk-yz-R7j"/>
+                                    <outlet property="contactNameLabel" destination="Grp-fV-UVP" id="L5d-Hj-2Um"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

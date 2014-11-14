@@ -9,5 +9,14 @@
 import UIKit
 
 public class ContactsCell: UICollectionViewCell {
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var contactNameLabel: UILabel!
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
         
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
+    }
+    
 }

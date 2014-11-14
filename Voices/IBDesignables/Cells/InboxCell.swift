@@ -15,12 +15,19 @@ public class InboxCell: UICollectionViewCell {
         return 74
     }
     
-    @IBOutlet var messageCountLabel: UILabel?
+    @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var messageCountLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     
     public override func awakeFromNib() {
         super.awakeFromNib()
         
-        messageCountLabel!.layer.cornerRadius = messageCountLabel!.bounds.width / 2
+        containerView.layer.cornerRadius = 2
+        messageCountLabel.layer.cornerRadius = messageCountLabel.bounds.width / 2
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
     }
         
 }
