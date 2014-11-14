@@ -48,7 +48,48 @@
                     <view key="view" contentMode="scaleToFill" id="YDs-I3-azj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-zM-cG8">
+                                <rect key="frame" x="268" y="28" width="64" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-at-ZZF" customClass="RecordButton" customModule="IBDesignables">
+                                <rect key="frame" x="260" y="259" width="81" height="81"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="C90-Gc-qRG"/>
+                                    <constraint firstAttribute="height" constant="81" id="Fqp-MA-2rb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jt-AY-hNU">
+                                <rect key="frame" x="283" y="549" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap and hold to record your message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-7L-bvt">
+                                <rect key="frame" x="190" y="79" width="220" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="qrr-xY-PXK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bTb-zM-cG8" secondAttribute="centerX" id="44D-Y2-6ec"/>
+                            <constraint firstAttribute="centerX" secondItem="0jt-AY-hNU" secondAttribute="centerX" id="HQO-QL-9Mx"/>
+                            <constraint firstItem="SNM-7L-bvt" firstAttribute="top" secondItem="bTb-zM-cG8" secondAttribute="bottom" constant="27" id="OJh-z1-5og"/>
+                            <constraint firstAttribute="centerY" secondItem="dhE-at-ZZF" secondAttribute="centerY" constant="0.5" id="PMi-dF-Kk5"/>
+                            <constraint firstAttribute="centerX" secondItem="dhE-at-ZZF" secondAttribute="centerX" constant="-0.5" id="Z1O-FH-8ir"/>
+                            <constraint firstItem="bTb-zM-cG8" firstAttribute="top" secondItem="P9w-XW-VrE" secondAttribute="bottom" constant="8" id="af4-9g-Nch"/>
+                            <constraint firstAttribute="centerX" secondItem="SNM-7L-bvt" secondAttribute="centerX" id="fgk-vf-kEg"/>
+                            <constraint firstItem="pya-8y-4x2" firstAttribute="top" secondItem="0jt-AY-hNU" secondAttribute="bottom" constant="30" id="oOV-Ge-HIX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jw-Lt-QON" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +107,19 @@
                     <view key="view" contentMode="scaleToFill" id="y3O-p5-acg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZt-0Y-M0x">
+                                <rect key="frame" x="275" y="20" width="50" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eZt-0Y-M0x" secondAttribute="centerX" id="Xfd-IC-Ocx"/>
+                            <constraint firstItem="eZt-0Y-M0x" firstAttribute="top" secondItem="TBB-J9-FCY" secondAttribute="bottom" id="aZm-HN-3Vm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0g-RN-M7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,7 +137,19 @@
                     <view key="view" contentMode="scaleToFill" id="q15-0i-zYC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-pb-VeE">
+                                <rect key="frame" x="260" y="28" width="80" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="MRf-pb-VeE" secondAttribute="centerX" id="OXN-2R-0tJ"/>
+                            <constraint firstItem="MRf-pb-VeE" firstAttribute="top" secondItem="HTx-cl-v5p" secondAttribute="bottom" constant="8" id="ove-bU-axY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUY-1C-Nh1" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,16 +12,11 @@ import UIKit
  *  the content view controller
  */
 class ContentViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview({
-            let label = UILabel()
-            label.text = NSStringFromClass(self.dynamicType.self)
-            label.sizeToFit()
-            return label
-        }())
+
+        view.backgroundColor = UIColor.clearColor()
     }
 
 }
