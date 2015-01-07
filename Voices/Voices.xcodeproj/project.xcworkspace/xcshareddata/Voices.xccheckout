@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1C7132FD-7CA9-4098-BA7D-AACD244015A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Voices</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8935FBFC2F9875E168529AEE16AAC7FD8B33620E</key>
+		<string>github.com:Mazyod/voicesrepo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Voices/Voices.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8935FBFC2F9875E168529AEE16AAC7FD8B33620E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Mazyod/voicesrepo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8935FBFC2F9875E168529AEE16AAC7FD8B33620E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8935FBFC2F9875E168529AEE16AAC7FD8B33620E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>voicesrepo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
