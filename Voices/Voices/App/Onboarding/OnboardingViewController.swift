@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import QuartzCore
 
 class OnboardingViewController: UIViewController, UIPageViewControllerDataSource {
 
-    private var pageControl: UIPageViewController?
+    private var pageController: UIPageViewController?
     private var viewControllers: [OnboardingChildViewController] = []
+    
     @IBOutlet weak var pageControllerContainer: UIView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let pageControlAppearance = UIPageControl.appearance()
+        pageControlAppearance.pageIndicatorTintColor = UIColor(red: 239 / 255.0, green: 197.0 / 255.0, blue: 214 / 255.0, alpha: 1.0)
+        pageControlAppearance.currentPageIndicatorTintColor = UIColor(red: 213 / 255.0, green: 72 / 255.0, blue: 122 / 255.0, alpha: 1.0)
+        
+        initializePageController()
+        
+        initializeButtonStyles()
+    }
+    
+    func initializePageController() {
         var tutorialPageControl = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal , options: nil)
         tutorialPageControl.dataSource = self
         tutorialPageControl.view.frame = pageControllerContainer.bounds
@@ -37,11 +51,45 @@ class OnboardingViewController: UIViewController, UIPageViewControllerDataSource
         viewControllers = [intro, howTo, final]
         tutorialPageControl.setViewControllers([intro], direction: .Forward, animated: false, completion: nil)
         
-        pageControl = tutorialPageControl
+        pageController = tutorialPageControl
         
-        self.addChildViewController(pageControl!)
-        pageControllerContainer.addSubview(pageControl!.view)
-        pageControl!.didMoveToParentViewController(self)
+        self.addChildViewController(pageController!)
+        pageControllerContainer.addSubview(pageController!.view)
+        pageControllerContainer.backgroundColor = UIColor.clearColor()
+        pageController!.didMoveToParentViewController(self)
+    }
+    
+    func initializeButtonStyles() {
+        let startColor = UIColor(red: 217 / 255.0, green: 105 / 255.0, blue: 87 / 255.0, alpha: 1)
+        let endColor = UIColor(red: 213 / 255.0, green: 73 / 255.0, blue: 125 / 255.0, alpha: 1)
+        
+        loginButton.layer.cornerRadius = CGRectGetHeight(loginButton.bounds) / 2
+        loginButton.clipsToBounds = true
+        loginButton.backgroundColor = self.verticalGradient(startColor, toColor: endColor, height: CGRectGetHeight(loginButton.bounds))
+        loginButton.titleLabel?.textColor = UIColor.whiteColor()
+        loginButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        
+        signupButton.layer.cornerRadius = CGRectGetHeight(loginButton.bounds) / 2
+        signupButton.clipsToBounds = true
+        signupButton.backgroundColor = self.verticalGradient(startColor, toColor: endColor, height: CGRectGetHeight(signupButton.bounds))
+        signupButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    }
+    
+    func verticalGradient(fromColor: UIColor, toColor: UIColor, height: CGFloat) -> UIColor {
+        let size = CGSizeMake(1, height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        let colorspace = CGColorSpaceCreateDeviceRGB()
+        
+        let colors = [fromColor.CGColor, toColor.CGColor]
+        let gradient = CGGradientCreateWithColors(colorspace, colors, nil)
+        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, height), 0)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext()
+        
+        return UIColor(patternImage: image)
     }
     
     //MARK: UIPageViewControllerDataSource
