@@ -32,22 +32,29 @@ class OnboardingChildViewController: UIViewController {
     }
     
     func gradientSetup() {
-        let startColor = UIColor.redColor()//UIColor(red: 218 / 255.0, green: 158 / 255.0, blue: 66 / 255.0, alpha: 1)
-        let endColor = UIColor.blueColor()//UIColor(red: 221 / 255.0, green: 150 / 255.0, blue: 186 / 255.0, alpha: 1)
+        let startColor = UIColor(red: 220 / 255.0, green: 142 / 255.0, blue: 54 / 255.0, alpha: 1)
+        let endColor = UIColor(red: 213 / 255.0, green: 71 / 255.0, blue: 123 / 255.0, alpha: 1)
         if(messageLabel != nil) {
-            messageLabel.textColor = self.gradient(startColor, toColor: endColor, height: CGRectGetHeight(messageLabel.bounds))
+            messageLabel.textColor = self.horizontalGradient(startColor, toColor: endColor)
+        }
+        
+        if(voicesLabel != nil) {
+            voicesLabel.textColor = self.horizontalGradient(startColor, toColor: endColor)
         }
     }
     
-    func gradient(fromColor: UIColor, toColor: UIColor, height: CGFloat) -> UIColor {
-        let size = CGSizeMake(1, height)
+    func horizontalGradient(fromColor: UIColor, toColor: UIColor) -> UIColor {
+        let labelTextWidth = messageLabel!.intrinsicContentSize().width
+        let labelTextHeight = messageLabel!.intrinsicContentSize().height
+        
+        let size = CGSizeMake(labelTextWidth, 1)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()
         let colorspace = CGColorSpaceCreateDeviceRGB()
         
         let colors = [fromColor.CGColor, toColor.CGColor]
         let gradient = CGGradientCreateWithColors(colorspace, colors, nil)
-        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, size.height), 0)
+        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(labelTextWidth, 0), 0)
         
         let image = UIGraphicsGetImageFromCurrentImageContext();
         
