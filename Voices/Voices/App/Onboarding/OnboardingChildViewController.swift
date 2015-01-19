@@ -21,6 +21,14 @@ class OnboardingChildViewController: UIViewController {
         super.viewDidLoad()
         
         gradientSetup()
+        
+        if(message != nil && messageLabel != nil) {
+            messageLabel.text = message
+        }
+        
+        if(image != nil && imageView != nil) {
+            imageView.image = image
+        }
     }
     
     func gradientSetup() {
