@@ -10,6 +10,9 @@
 		01D9F1261A1BC8A60062AD98 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D9F1241A1BC8A60062AD98 /* TwitterKit.framework */; };
 		01D9F1271A1BC8A60062AD98 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01D9F1251A1BC8A60062AD98 /* TwitterKitResources.bundle */; };
 		01D9F1291A1C2DCE0062AD98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9F1281A1C2DCE0062AD98 /* LoginViewController.swift */; };
+		731316111A6C024E00D32A72 /* OnboardingChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731316101A6C024E00D32A72 /* OnboardingChildViewController.swift */; };
+		731316131A6C9A6200D32A72 /* OnboardingChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731316121A6C9A6200D32A72 /* OnboardingChildViewController.xib */; };
+		73B2A8351A6C011B001EF012 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2A8341A6C011B001EF012 /* OnboardingViewController.swift */; };
 		822A4AAE1A0456DF00884B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AAD1A0456DF00884B10 /* AppDelegate.swift */; };
 		822A4AB01A0456DF00884B10 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A4AAF1A0456DF00884B10 /* RootViewController.swift */; };
 		822A4AB31A0456DF00884B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822A4AB11A0456DF00884B10 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		01D9F1241A1BC8A60062AD98 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
 		01D9F1251A1BC8A60062AD98 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		01D9F1281A1C2DCE0062AD98 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		731316101A6C024E00D32A72 /* OnboardingChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingChildViewController.swift; path = Onboarding/OnboardingChildViewController.swift; sourceTree = "<group>"; };
+		731316121A6C9A6200D32A72 /* OnboardingChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingChildViewController.xib; sourceTree = "<group>"; };
+		73B2A8341A6C011B001EF012 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Onboarding/OnboardingViewController.swift; sourceTree = "<group>"; };
 		822A4AA81A0456DF00884B10 /* Voices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822A4AAC1A0456DF00884B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		822A4AAD1A0456DF00884B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73B2A8331A6C00E4001EF012 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				73B2A8341A6C011B001EF012 /* OnboardingViewController.swift */,
+				731316101A6C024E00D32A72 /* OnboardingChildViewController.swift */,
+				731316121A6C9A6200D32A72 /* OnboardingChildViewController.xib */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
 		822A4A9F1A0456DF00884B10 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +172,7 @@
 				824D347A1A1696F300975EDD /* Inbox */,
 				824D34791A1696EB00975EDD /* Contacts */,
 				824D34781A1696E500975EDD /* Record */,
+				73B2A8331A6C00E4001EF012 /* Onboarding */,
 				822DFF781A0EAB270023AE19 /* ContentViewController.swift */,
 				01D9F1281A1C2DCE0062AD98 /* LoginViewController.swift */,
 			);
@@ -341,6 +358,7 @@
 				822A4AB31A0456DF00884B10 /* Main.storyboard in Resources */,
 				822A4AB81A0456DF00884B10 /* LaunchScreen.xib in Resources */,
 				822A4AB51A0456DF00884B10 /* Images.xcassets in Resources */,
+				731316131A6C9A6200D32A72 /* OnboardingChildViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +399,8 @@
 				824D348B1A16A93500975EDD /* ContactsCollectionViewController.swift in Sources */,
 				824D34991A16AC4B00975EDD /* UIView+Extras.swift in Sources */,
 				822DFF731A0EA66A0023AE19 /* ContactsViewController.swift in Sources */,
+				73B2A8351A6C011B001EF012 /* OnboardingViewController.swift in Sources */,
+				731316111A6C024E00D32A72 /* OnboardingChildViewController.swift in Sources */,
 				822DFF791A0EAB270023AE19 /* ContentViewController.swift in Sources */,
 				824D34821A169D9F00975EDD /* InboxCollectionViewController.swift in Sources */,
 				822DFF751A0EA67F0023AE19 /* InboxViewController.swift in Sources */,
