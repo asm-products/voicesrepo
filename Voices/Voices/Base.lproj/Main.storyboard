@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f2l-Ic-L4d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T13-Hg-ysD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="aAm-HT-yVR">
+            <objects>
+                <viewController id="T13-Hg-ysD" customClass="OnboardingViewController" customModule="Voices" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SH5-8U-k77"/>
+                        <viewControllerLayoutGuide type="bottom" id="mre-Q0-e4e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zoJ-Bo-tlo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QV4-1K-VaM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="535"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgv-iI-ClJ">
+                                <rect key="frame" x="16" y="543" width="274" height="49"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f2l-Ic-L4d" kind="presentation" id="Mr4-Eh-PeG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-PT-KkW">
+                                <rect key="frame" x="310" y="543" width="274" height="49"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f2l-Ic-L4d" kind="presentation" id="Toc-xT-qwH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gx5-PT-KkW" secondAttribute="trailing" constant="16" id="7F4-rU-UWK"/>
+                            <constraint firstItem="Lgv-iI-ClJ" firstAttribute="leading" secondItem="zoJ-Bo-tlo" secondAttribute="leadingMargin" id="BVM-3Q-my2"/>
+                            <constraint firstItem="mre-Q0-e4e" firstAttribute="top" secondItem="Gx5-PT-KkW" secondAttribute="bottom" constant="8" id="Gtk-iT-SpO"/>
+                            <constraint firstItem="mre-Q0-e4e" firstAttribute="top" secondItem="QV4-1K-VaM" secondAttribute="bottom" constant="65" id="Ngu-e8-ckR"/>
+                            <constraint firstItem="Lgv-iI-ClJ" firstAttribute="top" secondItem="QV4-1K-VaM" secondAttribute="bottom" constant="8" id="Q2P-bf-9LE"/>
+                            <constraint firstItem="Lgv-iI-ClJ" firstAttribute="width" secondItem="Gx5-PT-KkW" secondAttribute="width" id="V7C-1Y-jLN"/>
+                            <constraint firstAttribute="trailing" secondItem="QV4-1K-VaM" secondAttribute="trailing" id="YT7-BQ-Pd8"/>
+                            <constraint firstItem="mre-Q0-e4e" firstAttribute="top" secondItem="Lgv-iI-ClJ" secondAttribute="bottom" constant="8" id="ZAH-Je-hQd"/>
+                            <constraint firstItem="QV4-1K-VaM" firstAttribute="top" secondItem="zoJ-Bo-tlo" secondAttribute="top" id="fhW-2P-h6p"/>
+                            <constraint firstItem="QV4-1K-VaM" firstAttribute="leading" secondItem="zoJ-Bo-tlo" secondAttribute="leading" id="q1F-17-rcK"/>
+                            <constraint firstItem="Gx5-PT-KkW" firstAttribute="leading" secondItem="Lgv-iI-ClJ" secondAttribute="trailing" constant="20" id="tug-CY-59d"/>
+                            <constraint firstItem="Gx5-PT-KkW" firstAttribute="top" secondItem="QV4-1K-VaM" secondAttribute="bottom" constant="8" id="uxE-Y1-QB9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Gx5-PT-KkW" id="YgT-Uk-Ze8"/>
+                        <outlet property="pageControllerContainer" destination="QV4-1K-VaM" id="WxS-pt-10D"/>
+                        <outlet property="signupButton" destination="Lgv-iI-ClJ" id="L7E-GU-xmv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehe-b5-WjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="-1081"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="ACD-oE-d4G">
             <objects>
@@ -355,4 +420,7 @@
             <point key="canvasLocation" x="312" y="1750.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Toc-xT-qwH"/>
+    </inferredMetricsTieBreakers>
 </document>
